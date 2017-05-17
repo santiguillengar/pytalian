@@ -1,0 +1,74 @@
+universita
+university
+facolta
+faculty
+ingegneria
+engineering
+architettura
+architecture
+lingue
+languages
+legge
+law
+informatica
+computing
+buongiorno
+good morning
+buonasera
+good evening
+buonanotte
+good night
+ciao
+hello
+salve
+hello (starts with s)
+come si chiama?
+what is your name? (formal)
+come ti chiami?
+what is your name? (informal)
+di dove sei?
+where are you from? (informal)
+sono spagnolo
+im spanish
+dove abita?
+where do you live? (formal)
+dove abiti?
+where do you live? (informal)
+gallese
+welsh
+tedesco
+german
+messicano
+mexican
+portoghese
+portuguese
+marocchino
+moroccan
+indiano
+indian
+svizzero
+swiss
+inglese
+english
+olandese
+dutch
+scozzese
+scottish
+egiziano
+egiptian
+iracheno
+iraqi
+uno studente
+a student (m)
+una studentessa 
+a student(f)
+studiare
+to study
+terzo anno
+third year
+andare
+to go
+vivere
+to live
+presto
+soon

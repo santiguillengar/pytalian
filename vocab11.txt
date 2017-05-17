@@ -1,0 +1,294 @@
+universita
+university
+facolta
+faculty
+ingegneria
+engineering
+architettura
+architecture
+lingue
+languages
+legge
+law
+informatica
+computing
+buongiorno
+good morning
+buonasera
+good evening
+buonanotte
+good night
+ciao
+hello
+salve
+hello (starts with s)
+come si chiama?
+what is your name? (formal)
+come ti chiami?
+what is your name? (informal)
+di dove sei?
+where are you from? (informal)
+sono spagnolo
+im spanish
+dove abita?
+where do you live? (formal)
+dove abiti?
+where do you live? (informal)
+gallese
+welsh
+tedesco
+german
+messicano
+mexican
+portoghese
+portuguese
+marocchino
+moroccan
+indiano
+indian
+svizzero
+swiss
+inglese
+english
+olandese
+dutch
+scozzese
+scottish
+egiziano
+egiptian
+iracheno
+iraqi
+uno studente
+a student (m)
+una studentessa 
+a student(f)
+studiare
+to study
+terzo anno
+third year
+andare
+to go
+vivere
+to live
+presto
+soon
+lavoro
+work
+professione
+profession
+architetto
+architect
+traduttore
+translator (m)
+traduttrice
+translator (f)
+segretario
+secretary (m)
+studente
+student (m)
+studentessa
+student (f)
+agente di polizia
+policeman
+attore
+actor
+attrice
+actress
+insegnante
+teacher
+fare
+to do
+che lavoro fai?
+what job do you do? (informal)
+che lavoro fa?
+what job do you do? (formal)
+faccio l'architetto
+i am an architect
+sono architetto
+i am an architect (starts with s)
+ingegnere informatico
+computer engineer
+azienda
+company
+ma
+but
+io abito a londra
+i live in london
+io ho 23 anni
+i am 23 years old
+sei sposato?
+are you married? (m)
+quanti anni hai?
+how old are you?
+address
+indirizzo
+il suo nome?
+your name?
+anche
+also
+non ha figli
+doesnt have kids
+come stai?
+how are you?
+io sto benissimo
+im very well
+ieri
+yesterday
+come va?
+hows it going?
+scrittore
+writer (m)
+casalinga
+housewife
+politico
+politician
+uscire di casa
+to leave home
+studiare in biblioteca
+to study in the library
+tornare a casa
+to return home
+guardare la tv
+to watch tv
+uscire con gli amici
+to go out with friends
+andare a dormire
+to go to bed
+verso
+approximately
+fino a 
+until
+tardi
+late
+non fa colazione
+he does not have breakfast
+andare al lavoro
+to go to work
+pranzare al ristorante
+to eat in a restaurant
+dopo mezzanotte
+after midnight
+dormire
+to sleep
+ora di pranzo
+lunchtime
+ho sonno
+im sleepy
+fino a
+until
+il finne settimana
+the weekend
+presto
+early
+tardi
+late
+lavarsi
+to wash oneself
+tutto il giorno
+all day long
+divertirsi
+to have fun 
+invece
+on the contrary
+in vacanza
+on holiday
+a letto
+in bed
+nipotino
+nephew
+morto
+dead
+comesso
+shop assistant
+negozio di scarpe
+shoe shop
+grazie della tua lettera
+thanks for your letter
+cornetto
+croissant
+dopo pranzo
+after lunch
+viene a prendermi
+he comes to pick me up
+qualche volta
+sometimes
+andiamo a teatro
+we go to the theatre
+ci sono
+there are
+odia ballare
+he hates dancing
+a presto
+see you soon
+ballare
+to dance
+amici
+friends
+cucinare
+to cook
+fare una passeggiata
+to go for a walk
+andare in palestra
+to go to the gym
+per niente
+not at all
+tanto
+a lot
+anche a me
+so do I
+neanche a me
+neither do I
+fragole
+strawberries
+mi piace un sacco
+i like a lot
+macchine veloci
+fast cars
+quadri
+paintings
+stasera
+tonight
+costa troppo
+it costs too much
+veramente?
+really?
+rimaniamo a casa
+lets stay at home
+mai
+never
+quasi mai
+almost never
+ogni tanto
+every now and then
+qualche volta
+sometimes
+di solito
+usually
+spesso
+often
+molto spesso
+very often
+sempre
+always
+giornale
+newspaper
+festeggiare
+to celebrate
+tramonto
+sunset
+prenotazione
+reservation
+castello
+castle
+riconoscere
+to recognise
+mare
+sea
+montagna
+mountains
+andare a cena fuori
+to go out for dinner
+lavare i piatti
+to do the washing up
+carne
+meat

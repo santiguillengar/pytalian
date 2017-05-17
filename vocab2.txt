@@ -1,0 +1,70 @@
+lavoro
+work
+professione
+profession
+architetto
+architect
+traduttore
+translator (m)
+traduttrice
+translator (f)
+segretario
+secretary (m)
+studente
+student (m)
+studentessa
+student (f)
+agente di polizia
+policeman
+attore
+actor
+attrice
+actress
+insegnante
+teacher
+fare
+to do
+che lavoro fai?
+what job do you do? (informal)
+che lavoro fa?
+what job do you do? (formal)
+faccio l'architetto
+i am an architect
+sono architetto
+i am an architect (starts with s)
+ingegnere informatico
+computer engineer
+azienda
+company
+ma
+but
+io abito a londra
+i live in london
+io ho 23 anni
+i am 23 years old
+sei sposato?
+are you married? (m)
+quanti anni hai?
+how old are you?
+address
+indirizzo
+il suo nome?
+your name?
+anche
+also
+non ha figli
+doesnt have kids
+come stai?
+how are you?
+io sto benissimo
+im very well
+ieri
+yesterday
+come va?
+hows it going?
+scrittore
+writer (m)
+casalinga
+housewife
+politico
+politician
