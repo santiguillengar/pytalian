@@ -92,7 +92,7 @@ def testVerbs():
 
 		for line in file: 
 			correctVerb.append(line.replace('\n',''))
-		print(correctVerb)
+
 		print("\n{}".format(filename[:-4]))
 
 		for i in range(len(people)):
