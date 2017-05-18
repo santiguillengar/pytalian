@@ -71,8 +71,8 @@ def addVocab():
 			return 
 		else: 
 			spengWord = raw_input("Insert translation:   ")
-			italianWord+="\n"
-			spengWord+="\n"
+			italianWord = "\n" + italianWord
+			spengWord = "\n" + spengWord
 			file.write(italianWord)
 			file.write(spengWord)
 			if filename != "vocab0.txt":
