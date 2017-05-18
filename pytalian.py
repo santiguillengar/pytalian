@@ -104,7 +104,9 @@ def testVerbs():
 				wrongCount += 1
 				print("    Wrong! It should be: {}".format(correctVerb[i]))
 		if wrongCount == 0:
-			print("\n    Perfect!\n")
+			print("\n                                    Perfect!\n")
+		else:
+			print("You made {} mistakes".format(wrongCount))
 
 
 
