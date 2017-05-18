@@ -14,6 +14,7 @@ def testVocab():
 	
 	# PREPARATION OF VOCAB
 	messList = [] 
+	errors = []
 	translation = ""
 	item = ()
 	correct = 0
@@ -32,16 +33,21 @@ def testVocab():
 		print(item[0])
 		translation = input_func("Italian:   ")
 		translation = formatVocab(translation)
-		if (translation != "exit"):
+		if (translation != "exit" and translation != "3"):
 			total = total +1
 			if translation != formatVocab(item[1]):
-				print("\nNah: {}".format(item[1]))
+				print("\n    Nah: {}\n".format(item[1]))
+				errors.append(formatVocab(item[1]))
 			else:
-				print("\nCorrect!\n")
+				print("\n    Correct!\n")
 				correct = correct + 1 
 		else:
 			if total != 0:
 				print("\nYou answered {} / {} correctly!".format(correct, total))
+				errorString = ""
+				for error in errors:
+					errorString += error + ", "
+				print("You should revise:\n{}.\n\n".format(errorString[:-2]))
 			main()
 
 
@@ -50,14 +56,14 @@ def addVocab():
 
 	filename = getUnit()
 	file = open(filename,"a") #opens file with name of "vocab.txt"
-	if filename != "vocab11.txt":
-		file2 = open("vocab11.txt","a")
+	if filename != "vocab0.txt":
+		file2 = open("vocab0.txt","a")
 	
 	while True:
 		italianWord = raw_input("\nInsert italian vocab:   ")
-		if italianWord == "exit":
+		if italianWord == "exit" or italianWord == "3":
 			file.close()
-			if filename != "vocab11.txt":
+			if filename != "vocab0.txt":
 				file2.close()
 			return 
 		else: 
@@ -66,13 +72,14 @@ def addVocab():
 			spengWord+="\n"
 			file.write(italianWord)
 			file.write(spengWord)
-			if filename != "vocab11.txt":
+			if filename != "vocab0.txt":
 				file2.write(italianWord)
 				file2.write(spengWord)
 		
 def getUnit():
 
 	print("\nUNITS:")
+	print("0. Random")
 	print("1. Come ti chiami?")
 	print("2. Al lavoro e in famiglia")
 	print("3. Una giornata tipica")
@@ -83,11 +90,12 @@ def getUnit():
 	print("8. Ti va di...?")
 	print("9. Cosa hai fatto ieri?")
 	print("10. Ieri, oggi, domani")
-	print("11. Random")
 									
 	unit = raw_input("What unit do you want?   ")
-	units = ["1","2","3","4","5","6","7","8","9","10","11"]
-	filename = "vocab11.txt"
+	units = ["0","1","2","3","4","5","6","7","8","9","10"]
+	filename = "vocab0.txt"
+
+	print("\n")
 
 	if unit in units:
 		filename = "vocab" + unit + ".txt"
@@ -100,9 +108,10 @@ def formatVocab(vocab):
 	return vocab.lower()
 
 def main():
+	print("UoE Foundation Italian 1 revision tool\nMay 2017, @SantiGuillenGar\n")
 	while True:
-		print("\n***** Hi! *****")
-		mode = raw_input("Are you adding vocab (1) or testing yourself (2)? \nTo quit press 3 or type \"exit\"   ")
+		print("\n                               ***** Ciao *****\n")
+		mode = raw_input("To quit press 3 or type \"exit\"\nAre you adding vocab (1) or testing yourself (2)?   ")
 		if mode == "1" or mode == "add":
 	 		addVocab()
 		if mode == "2" or mode == "test":
@@ -110,6 +119,8 @@ def main():
 		if mode == "3" or mode == "exit":
 			print("\n\nCiao!\n\n")
 			quit()
+		else:
+			print("\nError: option not available!")
 
 
 if __name__ == "__main__":
