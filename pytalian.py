@@ -37,18 +37,21 @@ def testVocab():
 			total = total +1
 			if translation != formatVocab(item[1]):
 				print("\n    Nah: {}\n".format(item[1]))
-				errors.append(formatVocab(item[1]))
+				if (not formatVocab(item[1]) in errors):
+					errors.append(formatVocab(item[1]))
+				vocab.append(item) #add word to the loop again to be redone
 			else:
 				print("\n    Correct!\n")
 				correct = correct + 1 
 		else:
-			if total != 0:
-				print("\nYou answered {} / {} correctly!".format(correct, total))
-				errorString = ""
-				for error in errors:
-					errorString += error + ", "
-				print("You should revise:\n{}.\n\n".format(errorString[:-2]))
-			main()
+			break
+	if total != 0:
+		print("\nYou answered {} / {} correctly!".format(correct, total))
+		if (len(errors) != 0):
+			errorString = ""
+			for error in errors:
+				errorString += error + ", "
+			print("You should revise:\n{}.\n\n".format(errorString[:-2]))
 
 
 # function used to add new vocabulary to system.
@@ -119,8 +122,6 @@ def main():
 		if mode == "3" or mode == "exit":
 			print("\n\nCiao!\n\n")
 			quit()
-		else:
-			print("\nError: option not available!")
 
 
 if __name__ == "__main__":

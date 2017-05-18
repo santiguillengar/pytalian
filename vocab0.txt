@@ -749,4 +749,7 @@ reserved (m)
 straniero
 foreign (m)
 il cellulare
-the mobile phone
+the mobile phone1
+1
+2
+2
