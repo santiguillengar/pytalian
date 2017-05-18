@@ -80,6 +80,7 @@ def addVocab():
 				file2.write(spengWord)
 
 def testVerbs():
+
 	while (True):
 		filename = getVerb()
 		if filename == "exit":
@@ -106,13 +107,11 @@ def testVerbs():
 		if wrongCount == 0:
 			print("\n                                    Perfect!\n")
 		else:
-			print("You made {} mistakes".format(wrongCount))
+			print("                              You made {} mistakes!".format(wrongCount))
 
 
 
 def getVerb():
-
-	# (!) I must add the four last verbs when I get home and I have my notes for the code to work properly.
 
 	print("\nVERBS:\n")
 	print("0.  RANDOM")
@@ -122,15 +121,15 @@ def getVerb():
 	print("4.  ANDARE       14. VENDERE")
 	print("5.  USCIRE       15. PARTIRE")
 	print("6.  VENIRE       16. FINIRE")
-	print("7.  DARE         17. -")
-	print("8.  BERE         18. -")
-	print("9.  POTERE       19. -")
-	print("10. VOLERE       20. -")
+	print("7.  DARE         17. CHIAMARSI")
+	print("8.  BERE         18. PREFERIRE")
+	print("9.  POTERE       19. STARNUTIRE")
+	print("10. VOLERE       20. CHIUDERE")
 									
 	verb = raw_input("What verb do you want?   ")
 	verbs = {"0":"RANDOM","1":"ESSERE","2":"AVERE","3":"FARE","4":"ANDARE","5":"USCIRE","6":"VENIRE","7":"DARE",
 	"8":"BERE","9":"POTERE","10":"VOLERE","11":"DIRE","12":"LEGGERE","13":"MANGIARE","14":"VENDERE","15":"PARTIRE",
-	"16":"FINIRE","17":"-","18":"-","19":"-","20":"-"}
+	"16":"FINIRE","17":"CHIAMARSI","18":"PREFERIRE","19":"STARNUTIRE","20":"CHIUDERE"}
 	filename = ""
 
 	while (not(verb in verbs.keys()) and (formatVocab(verb) != "exit")): 
@@ -139,13 +138,14 @@ def getVerb():
 
 	if verb == "exit":
 		return verb
-	
-	if verb != "0" and str(verbs.get(verb)) != "-":
-		filename = str(verbs.get(verb)) + ".txt"
 	if verb == "0":
 		randnum = random.randint(1, (len(verbs) -1))
 		filename = verbs.get(str(randnum)) + ".txt"
+	if verb != "0":
+		filename = str(verbs.get(verb)) + ".txt"
+
 	return filename
+
 
 		
 def getUnit():
@@ -195,6 +195,7 @@ def main():
 		if mode == "3" or mode == "exit":
 			print("\n\nCiao!\n\n")
 			quit()
+
 
 
 if __name__ == "__main__":
