@@ -31,15 +31,16 @@ def testVocab():
 	for item in vocab:
 		print(item[0])
 		translation = input_func("Italian:   ")
-		total = total +1
-		if (translation.lower() != "exit"):
-			if translation.lower() != item[1].lower():
+		translation = formatVocab(translation)
+		if (translation != "exit"):
+			total = total +1
+			if translation != formatVocab(item[1]):
 				print("\nNah: {}".format(item[1]))
 			else:
 				print("\nCorrect!\n")
 				correct = correct + 1 
 		else:
-			if total != 1:
+			if total != 0:
 				print("\nYou answered {} / {} correctly!".format(correct, total))
 			main()
 
@@ -93,10 +94,15 @@ def getUnit():
 
 	return filename
 
+def formatVocab(vocab):
+	if (vocab.endswith(" ")): 
+		vocab = vocab[:-1]
+	return vocab.lower()
+
 def main():
 	while True:
 		print("\n***** Hi! *****")
-		mode = raw_input("Are you adding vocab (1) or testing yourself (2)?   ")
+		mode = raw_input("Are you adding vocab (1) or testing yourself (2)? \nTo quit press 3 or type \"exit\"   ")
 		if mode == "1" or mode == "add":
 	 		addVocab()
 		if mode == "2" or mode == "test":
