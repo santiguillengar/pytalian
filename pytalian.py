@@ -58,6 +58,8 @@ def testVocab():
 def addVocab():
 
 	filename = getUnit()
+	if filename == "exit":
+		return
 	file = open(filename,"a") #opens file with name of "vocab.txt"
 	if filename != "vocab0.txt":
 		file2 = open("vocab0.txt","a")
