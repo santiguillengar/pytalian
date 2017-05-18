@@ -9,6 +9,8 @@ def testVocab():
 		input_func = input
 
 	filename = getUnit()
+	if filename == "exit":
+		return
 	file = open(filename,"r") #opens file with name of "vocab.txt"
 	
 	
@@ -139,7 +141,7 @@ def getVerb():
 		print(verb)
 
 	if verb == "exit":
-		return verb
+		filename = "exit"
 	if verb == "0":
 		randnum = random.randint(1, (len(verbs) -1))
 		filename = verbs.get(str(randnum)) + ".txt"
@@ -165,7 +167,7 @@ def getUnit():
 	print("9. Cosa hai fatto ieri?")
 	print("10. Ieri, oggi, domani")
 									
-	unit = raw_input("What unit do you want?   ")
+	unit = raw_input("What unit do you want to add vocab to?   ")
 	units = ["0","1","2","3","4","5","6","7","8","9","10"]
 	filename = "vocab0.txt"
 
@@ -173,7 +175,8 @@ def getUnit():
 
 	if unit in units:
 		filename = "vocab" + unit + ".txt"
-
+	if unit == "exit":
+		filename = "exit"
 	return filename
 
 def formatVocab(vocab):

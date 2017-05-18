@@ -749,7 +749,7 @@ reserved (m)
 straniero
 foreign (m)
 il cellulare
-the mobile phone1
+the mobile phone
 incontrare
 to meet
 addormentarsi
