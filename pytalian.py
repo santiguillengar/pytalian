@@ -89,29 +89,31 @@ def testVerbs():
 		filename = getVerb()
 		if filename == "exit":
 			return
-		file = open(filename,"r")
-		correctVerb = []
-		wrongCount = 0
-		wrong = []
-		people = ["Io", "Tu", "Lui/lei", "Noi", "Voi", "Loro"]
-
-		for line in file: 
-			correctVerb.append(line.replace('\n',''))
-
-		print("\n{}".format(filename[:-4]))
-
-		for i in range(len(people)):
-			userPerson = raw_input("{}:   ".format(people[i]))
-			if formatVocab(userPerson) == "exit" or userPerson == "3":
-				file.close()
-				return
-			if (formatVocab(userPerson) != formatVocab(correctVerb[i])):
-				wrongCount += 1
-				print("    Wrong! It should be: {}".format(correctVerb[i]))
-		if wrongCount == 0:
-			print("\n                                    Perfect!\n")
 		else:
-			print("                              You made {} mistakes!".format(wrongCount))
+			file = open(filename,"r")
+			correctVerb = []
+			wrongCount = 0
+			wrong = []
+			people = ["Io", "Tu", "Lui/lei", "Noi", "Voi", "Loro"]
+
+			for line in file: 
+				correctVerb.append(line.replace('\n',''))
+
+			print("\n{}".format(filename[:-4]))
+
+			for i in range(len(people)):
+				userPerson = raw_input("{}:   ".format(people[i]))
+				if formatVocab(userPerson) == "exit" or userPerson == "3":
+					file.close()
+					return
+				if (formatVocab(userPerson) != formatVocab(correctVerb[i])):
+					wrongCount += 1
+					print("    Wrong! It should be: {}".format(correctVerb[i]))
+			if wrongCount == 0:
+				print("\n                                    Perfect!\n")
+			else:
+				print("                              You made {} mistakes!".format(wrongCount))
+			file.close()
 
 
 
