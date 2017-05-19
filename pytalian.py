@@ -179,6 +179,52 @@ def getUnit():
 		filename = "exit"
 	return filename
 
+def translate():
+	print("\nTRANSLATION")
+	lang = raw_input("Is your word in italian (1) or in english (2)?   ")
+	while (lang != "1" and lang!="2" and lang !="3" and lang!= "exit"): 
+		lang = raw_input("Please select language of your word: italian (1) or english (2):   ")
+	if lang == "3" or lang == "exit":
+		return
+
+	word = raw_input("Insert word to translate:   ")
+
+	filename = "vocab0.txt"
+	file = open(filename,"r") #opens file with name of "vocab.txt"
+	
+	
+	# PREPARATION OF VOCAB
+	messList = [] 
+	italian = []
+	speng = []
+
+	for line in file:
+		messList.append(line)
+
+	italian = [i.replace('\n','') for i in messList[::2]] #even elements, zero indexed
+	speng = [i.replace('\n','') for i in messList[1::2]] #odd elements, zero indexed
+
+	for item in speng:
+		formatVocab(item)
+	for item in italian:
+		formatVocab(item)
+
+	if (lang == "1"):
+		if(not(formatVocab(word) in italian)):
+			print("Error: {} not found in system!\n".format(word))
+		else:
+			print("Translation: {}\n".format(speng[italian.index(word)]))
+
+	else:
+		if(not(formatVocab(word) in speng)):
+			print("Error: {} not found in system!\n".format(word))
+		else:
+			print("Translation: {}\n".format(italian[speng.index(word)]))
+
+	file.close()
+
+
+
 def formatVocab(vocab):
 	if (vocab.endswith(" ")): 
 		vocab = vocab[:-1]
@@ -188,7 +234,9 @@ def main():
 	print("UoE Foundation Italian 1 revision tool\nMay 2017, @SantiGuillenGar\n")
 	while True:
 		print("\n                            ***** Main menu *****\n")
-		mode = raw_input("To quit press 3 or type \"exit\"\nAre you adding vocab (1) or testing yourself (2)?   ")
+		mode = raw_input("To quit press 3 or type \"exit\"\nAre you translating something (0), adding vocab (1) or testing yourself (2)?   ")
+		if mode == "0" or mode == "translate":
+			translate()
 		if mode == "1" or mode == "add":
 	 		addVocab()
 		if mode == "2" or mode == "test":
