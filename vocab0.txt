@@ -890,3 +890,79 @@ pausa pranzo
 lunch break
 zona pedonale
 pedestrian area
+nonno
+grandfather
+padre
+father
+fratello
+brother
+marito
+husband
+nipote
+niece, nephew, grandchild
+nonna
+grandmother
+figlio
+son
+sorella
+sister
+zio
+uncle
+cugino
+cousin (m)
+madre
+mother
+figlia
+daughter
+moglie
+wife
+zia
+aunt
+cugina
+cousing (f)
+la mattina
+the morning
+il pomeriggio
+the afternoon
+la sera
+the evening
+la notte
+the night
+la colazione
+the breakfast
+il pranzo
+the lunch
+la cena
+the dinner
+poi
+then
+dopo
+after
+e
+and
+fare colazione
+to have breakfast
+pranzare
+to have lnch
+cenare
+to have dinner
+tardi
+late
+presto
+early
+di solito
+usually
+lunedì
+monday
+martedì
+tuesday
+mercoledì
+wednesday
+giovedì
+thursday
+venerdì
+friday
+sabato
+saturday
+domenica
+sunday

@@ -121,9 +121,9 @@ def getVerb():
 
 	print("\nVERBS:\n")
 	print("0.  RANDOM")
-	print("1.  ESSERE       11. DIRE")
-	print("2.  AVERE        12. LEGGERE")
-	print("3.  FARE         13. MANGIARE")
+	print("1.  ESSERE       11. DIRE           21. APRIRE")
+	print("2.  AVERE        12. LEGGERE        22. ALZARSI")
+	print("3.  FARE         13. MANGIARE       23. TORNARE")
 	print("4.  ANDARE       14. VENDERE")
 	print("5.  USCIRE       15. PARTIRE")
 	print("6.  VENIRE       16. FINIRE")
@@ -135,7 +135,9 @@ def getVerb():
 	verb = raw_input("What verb do you want?   ")
 	verbs = {"0":"RANDOM","1":"ESSERE","2":"AVERE","3":"FARE","4":"ANDARE","5":"USCIRE","6":"VENIRE","7":"DARE",
 	"8":"BERE","9":"POTERE","10":"VOLERE","11":"DIRE","12":"LEGGERE","13":"MANGIARE","14":"VENDERE","15":"PARTIRE",
-	"16":"FINIRE","17":"CHIAMARSI","18":"PREFERIRE","19":"STARNUTIRE","20":"CHIUDERE"}
+	"16":"FINIRE","17":"CHIAMARSI","18":"PREFERIRE","19":"STARNUTIRE","20":"CHIUDERE", "21":"APRIRE", "22":"ALZARSI",
+	"23":"TORNARE"}
+	
 	filename = ""
 
 	while (not(verb in verbs.keys()) and (formatVocab(verb) != "exit")): 

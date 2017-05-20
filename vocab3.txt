@@ -76,3 +76,49 @@ odia ballare
 he hates dancing
 a presto
 see you soon
+la mattina
+the morning
+il pomeriggio
+the afternoon
+la sera
+the evening
+la notte
+the night
+la colazione
+the breakfast
+il pranzo
+the lunch
+la cena
+the dinner
+poi
+then
+dopo
+after
+e
+and
+fare colazione
+to have breakfast
+pranzare
+to have lnch
+cenare
+to have dinner
+tardi
+late
+presto
+early
+di solito
+usually
+lunedì
+monday
+martedì
+tuesday
+mercoledì
+wednesday
+giovedì
+thursday
+venerdì
+friday
+sabato
+saturday
+domenica
+sunday

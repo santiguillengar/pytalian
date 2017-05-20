@@ -68,3 +68,33 @@ casalinga
 housewife
 politico
 politician
+nonno
+grandfather
+padre
+father
+fratello
+brother
+marito
+husband
+nipote
+niece, nephew, grandchild
+nonna
+grandmother
+figlio
+son
+sorella
+sister
+zio
+uncle
+cugino
+cousin (m)
+madre
+mother
+figlia
+daughter
+moglie
+wife
+zia
+aunt
+cugina
+cousin (f)

@@ -1,0 +1,3 @@
+([('pytalian',
+   '/Users/SantiGuillenGar/Documents/Uni/Y2S2/pytalian/dist/pytalian',
+   'EXECUTABLE')],)
