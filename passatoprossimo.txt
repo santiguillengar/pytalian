@@ -29,9 +29,9 @@ ho uscito
 io mi sono alzato
 Translate : i woke up (m)
 noi ci siamo alzati
-Translate: we woke up (m)
-voi vi siete alzati
 Translate: they woke up (m)
+voi vi siete alzati
+Translate: you woke up (pl, m)
 io sono stato
 Translate: I have been
 io ho scritto
@@ -50,3 +50,15 @@ io ho fatto
 Translate: I have done
 io ho preso
 Translate:  I have taken
+lei ha lavorato
+Translate: She worked
+loro hanno lavorato ieri
+Translate: They worked yesterday
+io ho imparato
+Translate: I learned
+tu hai imparato
+Translate: You learned
+lui ha capito
+Translate: He understood
+voi avete creduto
+Translate: You believed (pl)

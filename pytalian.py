@@ -1,5 +1,5 @@
 import random
-
+from termcolor import colored
 def testVocab():
 
 	filename = getUnit()
@@ -28,16 +28,16 @@ def testVocab():
 	for item in vocab:
 		print(item[0])
 		translation =raw_input("Italian:   ")
-		translation = formatVocab(translation)
+		translation = formatItem(translation)
 		if (translation != "exit" and translation != "-1"):
 			total = total +1
-			if translation != formatVocab(item[1]):
-				print("\n    Nah: {}\n".format(item[1]))
-				if (not formatVocab(item[1]) in errors):
-					errors.append(formatVocab(item[1]))
+			if translation != formatItem(item[1]):
+				print(colored("\n    Nah: {}\n".format(item[1]),"red"))
+				if (not formatItem(item[1]) in errors):
+					errors.append(formatItem(item[1]))
 				vocab.append(item) #add word to the loop again to be redone
 			else:
-				print("\n    Correct!\n")
+				print(colored("\n    Correct!\n","green"))
 				correct = correct + 1 
 		else:
 			break
@@ -47,7 +47,7 @@ def testVocab():
 			errorString = ""
 			for error in errors:
 				errorString += error + ", "
-			print("You should revise:\n{}.\n\n".format(errorString[:-2]))
+			print(colored("You should revise:\n{}.\n\n".format(errorString[:-2]),"yellow"))
 	file.close()
 
 
@@ -78,6 +78,44 @@ def addVocab():
 				file2.write(italianWord)
 				file2.write(spengWord)
 
+# function used to add new vocabulary to system.
+def addGrammar():
+
+	filename = "grammar.txt"
+	file = open(filename,"a") #opens file with name of "vocab.txt"
+
+	while True:
+		italianWord = raw_input("\nInsert italian grammar item:   ")
+		if italianWord == "exit" or italianWord == "-1":
+			file.close()
+			return 
+		else: 
+			spengWord = raw_input("Insert translation:   ")
+			italianWord = "\n" + italianWord
+			spengWord = "\n" + spengWord
+			file.write(italianWord)
+			file.write(spengWord)
+
+
+def addVerbPP():
+
+	filename = "passatoprossimo.txt"
+	file = open(filename,"a") #opens file with name of "vocab.txt"
+
+	while True:
+		italianWord = raw_input("\nInsert passato prossimo:   ")
+		if italianWord == "exit" or italianWord == "-1":
+			file.close()
+			return 
+		else: 
+			spengWord = raw_input("Insert translation:   ")
+			italianWord = "\n" + italianWord
+			spengWord = "\n" + spengWord
+			file.write(italianWord)
+			file.write(spengWord)
+
+
+
 def testVerbsPresent():
 
 	while (True):
@@ -98,15 +136,15 @@ def testVerbsPresent():
 
 		for i in range(len(people)):
 			userPerson = raw_input("{}:   ".format(people[i]))
-			if formatVocab(userPerson) == "exit" or userPerson == "-1":
+			if formatItem(userPerson) == "exit" or userPerson == "-1":
 				file.close()
 				return
-			if (formatVocab(userPerson) != formatVocab(correctVerb[i])):
+			if (formatItem(userPerson) != formatItem(correctVerb[i])):
 				wrongCount += 1
-				print("    Wrong! It should be: {}".format(correctVerb[i]))
+				print(colored("    Wrong! It should be: {}".format(correctVerb[i]),"yellow"))
 
 		if wrongCount == 0:
-			print("\n                                    Perfect!\n")
+			print(colored("\n                                    Perfect!\n","green"))
 		else:
 			print("                              You made {} mistakes!".format(wrongCount))
 		file.close()
@@ -135,16 +173,16 @@ def testVerbsPP():
 	for item in verbs:
 		print(item[0])
 		translation = raw_input("Italian:   ")
-		translation = formatVocab(translation)
+		translation = formatItem(translation)
 		if (translation != "exit" and translation != "-1"):
 			total = total +1
-			if translation != formatVocab(item[1]):
-				print("\n    Nah: {}\n".format(item[1]))
-				if (not formatVocab(item[1]) in errors):
-					errors.append(formatVocab(item[1]))
+			if translation != formatItem(item[1]):
+				print(colored("\n    Nah: {}\n".format(item[1]),"yellow"))
+				if (not formatItem(item[1]) in errors):
+					errors.append(formatItem(item[1]))
 				verbs.append(item) #add word to the loop again to be redone
 			else:
-				print("\n    Correct!\n")
+				print(colored("\n    Correct!\n","green"))
 				correct = correct + 1 
 		else:
 			break
@@ -154,7 +192,7 @@ def testVerbsPP():
 			errorString = ""
 			for error in errors:
 				errorString += error + ", "
-			print("You should revise:\n{}.\n\n".format(errorString[:-2]))
+			print(colored("You should revise:\n{}.\n\n".format(errorString[:-2]),"yellow"))
 	file.close()
 
 
@@ -181,16 +219,16 @@ def testGrammar():
 	for item in grammar:
 		print(item[0])
 		translation = raw_input("Italian:   ")
-		translation = formatVocab(translation)
+		translation = formatItem(translation)
 		if (translation != "exit" and translation != "-1"):
 			total = total +1
-			if translation != formatVocab(item[1]):
-				print("\n    Nah: {}\n".format(item[1]))
-				if (not formatVocab(item[1]) in errors):
-					errors.append(formatVocab(item[1]))
+			if translation != formatItem(item[1]):
+				print(colored("\n    Nah: {}\n".format(item[1]),"yellow"))
+				if (not formatItem(item[1]) in errors):
+					errors.append(formatItem(item[1]))
 				grammar.append(item) #add word to the loop again to be redone
 			else:
-				print("\n    Correct!\n")
+				print(colored("\n    Correct!\n","green"))
 				correct = correct + 1 
 		else:
 			break
@@ -200,7 +238,7 @@ def testGrammar():
 			errorString = ""
 			for error in errors:
 				errorString += error + ", "
-			print("You should revise:\n{}.\n\n".format(errorString[:-2]))
+			print(colored("You should revise:\n{}.\n\n".format(errorString[:-2]),"yellow"))
 	file.close()
 
 
@@ -226,7 +264,7 @@ def getVerb():
 	"23":"TORNARE"}
 
 
-	while (not(verb in verbs.keys()) and (formatVocab(verb) != "exit") and (formatVocab(verb) != "-1") ): 
+	while (not(verb in verbs.keys()) and (formatItem(verb) != "exit") and (formatItem(verb) != "-1") ): 
 		verb = raw_input("Please choose a valid verb number:   ")
 		print(verb)
 
@@ -295,19 +333,19 @@ def translate():
 	speng = [i.replace('\n','') for i in messList[1::2]] #odd elements, zero indexed
 
 	for item in speng:
-		formatVocab(item)
+		formatItem(item)
 	for item in italian:
-		formatVocab(item)
+		formatItem(item)
 
 	if (lang == "1"):
-		if(not(formatVocab(word) in italian)):
-			print("Error: {} not found in system!\n".format(word))
+		if(not(formatItem(word) in italian)):
+			print(colored("Error: {} not found in system!\n".format(word),"red"))
 		else:
 			print("Translation: {}\n".format(speng[italian.index(word)]))
 
 	else:
-		if(not(formatVocab(word) in speng)):
-			print("Error: {} not found in system!\n".format(word))
+		if(not(formatItem(word) in speng)):
+			print(colored("Error: {} not found in system!\n".format(word),"red"))
 		else:
 			print("Translation: {}\n".format(italian[speng.index(word)]))
 
@@ -315,39 +353,54 @@ def translate():
 
 
 
-def formatVocab(vocab):
-	if (vocab.endswith(" ")): 
+def formatItem(vocab):
+	while (vocab.endswith(" ") or vocab.endswith(".")): 
 		vocab = vocab[:-1]
 	return vocab.lower()
 
 def main():
-	print("UoE Foundation Italian 1 revision tool\nMay 2017, @SantiGuillenGar\n")
+	print(colored("UoE Foundation Italian 1 revision tool", "blue"))
+	print("May 2017, @SantiGuillenGar\n")
 	while True:
-		print("\n                            ***** Main menu *****\n")
-		mode = raw_input("To quit type \"-1\" or type \"exit\"\nAre you adding vocab (1), testing yourself (2) or translating something (3)?   ")
+		print(colored("\n                            ***** Main menu *****\n","blue"))
+		mode = raw_input("To quit type \"-1\" or type \"exit\"\nAre you adding content (1), testing yourself (2) or translating something (3)?   ")
 		if mode == "1" or mode == "add":
-	 		addVocab()
-		if mode == "2" or mode == "test":
+			addmode = raw_input("Do you want to add vocab (1), passato prossimo verbs (2) or grammar items(3)?   ")
+			if addmode == "1":
+				addVocab()
+			elif addmode == "2":
+				addVerbPP()
+			elif addmode == "3":
+				addGrammar()
+			elif addmode == "-1" or addmode == "exit":
+				main()
+			else:
+				print(colored("Error: That option is not available!","red")) 
+		elif mode == "2" or mode == "test":
 			testmode = raw_input("Do you want to test yourself on vocab (1), on verbs (2) or on grammar (3)?   ")
 			if testmode == "1":
 				testVocab()
-			if testmode == "2":
+			elif testmode == "2":
 				verbmode = raw_input("Present (1) or passato prossimo (2)?   ")
 				if verbmode == "1": 
 					testVerbsPresent()
-				if verbmode == "2":
+				elif verbmode == "2":
 					testVerbsPP()
-				if verbmode == "-1" or verbmode == "exit":
-					mode == "-1"
+				elif verbmode == "-1" or verbmode == "exit":
+					main()
 				else:
-					print("Error: That verb tense is not available!") 
-			if testmode == "3":
+					print(colored("Error: That verb tense is not available!","red")) 
+			elif testmode == "3":
 				testGrammar()
-		if mode == "3" or mode == "translate":
+			else:
+				print(colored("Error: That option is not available!","red")) 
+		elif mode == "3" or mode == "translate":
 			translate()
-		if mode == "-1" or mode == "exit":
+		elif mode == "-1" or mode == "exit":
 			print("\n\nCiao!\n\n")
 			quit()
+		else:
+			print(colored("Error: That option is not available!","red")) 
 
 
 
